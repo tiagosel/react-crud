@@ -1,8 +1,13 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import MainTable from "./modules/MainTable";
+
+let cabecalho = ["Name", "Age", "Salary"];
 
 class App extends Component {
+  //Lista de cabeçalho
+
   render() {
     return (
       <div className="App">
@@ -10,9 +15,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <MainTable cabecalho={cabecalho} />
       </div>
     );
   }
