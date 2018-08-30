@@ -9,8 +9,8 @@ class TableLines extends React.Component {
 
   addElement = () => {
     let newElement = { name: "Tiago", age: 38, slary: 8000 };
-    this.state.lines[this.state.lines.length] = newElement;
     let lines = this.state.lines;
+    lines[lines.length] = newElement;
     this.setState({ lines: lines });
   };
 
